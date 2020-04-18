@@ -4,6 +4,24 @@ import Layout from "./hoc/Layout";
 import "./App.css";
 
 class App extends React.Component {
+  state = {
+    clientWidth: null,
+    clientHeight: null
+  };
+
+  componentDidMount() {
+    this.setState({
+      clientWidth: document.body.clientWidth,
+      clientHeight: document.body.clientHeight
+    });
+    window.addEventListener("resize", () => {
+      this.setState({
+        clientWidth: document.body.clientWidth,
+        clientHeight: document.body.clientHeight
+      });
+    });
+  }
+
   render() {
     let routes = (
       <Switch>
@@ -11,7 +29,7 @@ class App extends React.Component {
         <Route path="/" render={() => <h1>Hues Template with routing</h1>} />
       </Switch>
     );
-    return <Layout>{routes}</Layout>;
+    return <Layout mobile={this.state.clientWidth <= 500}>{routes}</Layout>;
   }
 }
 
