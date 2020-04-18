@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
+import Layout from "./hoc/Layout";
 import "./App.css";
 
 class App extends React.Component {
@@ -10,7 +11,7 @@ class App extends React.Component {
         <Route path="/" render={() => <h1>Hues Template with routing</h1>} />
       </Switch>
     );
-    return <div className="App">{routes}</div>;
+    return <Layout>{routes}</Layout>;
   }
 }
 
