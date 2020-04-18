@@ -1,6 +1,10 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
 import Layout from "./hoc/Layout";
+import About from "./containers/About/About";
+import {
+  AnimatedRoutesWrapper,
+  RouteTransition
+} from "./components/animations/animatedRoutes/animatedRoutes";
 import "./App.css";
 
 class App extends React.Component {
@@ -24,10 +28,10 @@ class App extends React.Component {
 
   render() {
     let routes = (
-      <Switch>
-        <Route path="/help" render={() => <h1>Help page</h1>} />
-        <Route path="/" render={() => <h1>Hues Template with routing</h1>} />
-      </Switch>
+      <AnimatedRoutesWrapper>
+        <RouteTransition path="/help" component={<h1>Help page</h1>} />
+        <RouteTransition path="/" component={<About />} />
+      </AnimatedRoutesWrapper>
     );
     return <Layout mobile={this.state.clientWidth <= 500}>{routes}</Layout>;
   }

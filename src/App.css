@@ -1,5 +1,6 @@
 :root {
-  --white: rgb(255, 225, 231);
+  --white: #fff;
+  --primary: #fcd3c3;
 }
 
 * {
