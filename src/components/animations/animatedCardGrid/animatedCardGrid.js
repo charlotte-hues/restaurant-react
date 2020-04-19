@@ -39,15 +39,12 @@ export const AnimatedGridWrapper = props => {
   );
 };
 
+const cardVariants = {
+  in: { opacity: 1, scale: 1 },
+  out: { opacity: 0, scale: 0.7 },
+  hover: { scale: 1.1 }
+};
+
 export const AnimatedCard = props => {
-  return (
-    <StyledCard
-      exit={{ opacity: 0, scale: 0.8 }}
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      disabled={props.disabled}
-    >
-      {props.children}
-    </StyledCard>
-  );
+  return <StyledCard variants={cardVariants}>{props.children}</StyledCard>;
 };

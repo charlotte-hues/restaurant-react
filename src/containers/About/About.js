@@ -8,21 +8,22 @@ import {
   AnimatedGridWrapper,
   AnimatedCard
 } from "../../components/animations/animatedCardGrid/animatedCardGrid";
+import { AnimatedPageWrapper } from "../../components/animations/animatedRoutes/animatedRoutes";
 
 const about = props => (
-  <PageWrapper>
+  <AnimatedPageWrapper>
     <h1>ABOUT</h1>
     <GridWrapper>
-      <AnimatedCard>This</AnimatedCard>
-      <AnimatedCard>is</AnimatedCard>
-      <AnimatedCard>my</AnimatedCard>
-      <AnimatedCard>This</AnimatedCard>
-      <AnimatedCard>is</AnimatedCard>
-      <AnimatedCard>my</AnimatedCard>
-      <AnimatedCard>is</AnimatedCard>
-      <AnimatedCard>my</AnimatedCard>
+      <AnimatedCard whileHover="hover">This</AnimatedCard>
+      <AnimatedCard whileHover="hover">is</AnimatedCard>
+      <AnimatedCard whileHover="hover">my</AnimatedCard>
+      <AnimatedCard whileHover="hover">This</AnimatedCard>
+      <AnimatedCard whileHover="hover">is</AnimatedCard>
+      <AnimatedCard whileHover="hover">my</AnimatedCard>
+      <AnimatedCard whileHover="hover">is</AnimatedCard>
+      <AnimatedCard whileHover="hover">my</AnimatedCard>
     </GridWrapper>
-  </PageWrapper>
+  </AnimatedPageWrapper>
 );
 
 export default about;

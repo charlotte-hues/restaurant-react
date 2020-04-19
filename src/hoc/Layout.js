@@ -18,7 +18,7 @@ class Layout extends React.Component {
     return (
       <Wrapper mobile={this.props.mobile}>
         <Link to="/">Home</Link>
-        <Link to="/help">Help</Link>
+        <Link to="/bookings">Bookings</Link>
         {this.props.children}
       </Wrapper>
     );
